@@ -1,0 +1,179 @@
+@charset "utf-8";
+body {
+    width: 100%;
+    color: aliceblue; /* 記得補上分號 */
+    margin: 0 auto; 
+    font-family: sans-serif, "微軟正黑體"; 
+}
+
+header{/*頭部*/
+    background-color:rgb(27, 76, 61);
+    padding: 5px;
+}
+.h01{
+    text-align: center;
+    color: rgb(210, 228, 222);
+}
+.nav {
+    display: flex;
+    justify-content: flex-end; /* 讓所有內容靠右 */
+    gap: 5px;                 /* 兩個項目之間空隙 */
+    font-size: 18px;
+    background-color: rgb(28, 107, 46);
+}
+.nav a {
+    width: 10%;                /* 每個 <a> 寬度佔容器 10% */
+    text-align: center;        /* 文字置中對齊 */
+    color: aliceblue;
+    text-decoration: none;      /* 移除底線 */
+}
+.nav a:hover {
+    background-color:rgb(48, 129, 96);
+    color: rgb(14, 14, 14); /* 滑鼠移上去文字變黃 */
+}
+/* 目前頁面 (active) */
+.nav a.active {
+  background-color: #5b93c5;  /* 深藍底色 */
+  color: white;              /* 白字 */
+  font-weight: bold;         /* 粗體字 */
+  border-radius: 5px;        /* 可選：圓角 */
+}
+#index_home{
+    width: 100%;
+    height: 800px;
+    background-color: rgb(214, 235, 212);
+    padding: 0px;
+    float: right;
+}
+
+.index_table table {
+    width: 75%;          /* 或你想要的寬度 */
+    margin: 0 auto;      /* 左右自動置中 */
+    border-collapse: collapse;
+    
+}
+/* 預設每個欄位平均分配 */
+.index_table th, 
+.index_table td {
+    width: 20%;   
+}
+/* 讓第 3欄變小 */
+.index_table th:nth-child(3),
+.index_table td:nth-child(3){
+    width: 10%;   /* 比例縮小 */
+}
+/* 其他欄位可以再調整補回 */
+.index_table th:not(:nth-child(3)),
+.index_table td:not(:nth-child(3)) {
+    width: calc((100% - 10%) / 2);  /* 剩下 3 欄平均 */
+}
+.index_table th, .index_table td {
+    border: 1px solid #666;
+    padding: 10px;
+    text-align: center;
+}
+/* 表格欄位邊框 */
+.index_table table, 
+.index_table td, 
+.index_table th{
+    border: 1px solid #ffffff;      /* 灰色邊框 */
+    font-weight: bold;
+    text-align: center;
+}
+/* 表格標題列 (第一列) */
+.index_table tr:first-child {
+  background-color: #194e7c;   /* 淺藍背景 */
+}
+.index_table tr:not(:first-child) {
+  background-color: #6195c3;   /* 淺藍背景 */
+}
+/* 每個儲存格 */
+.index_table td ,.Prepare_table th{
+  padding: 10px 10px;          /* 內距 */
+  text-align: center;            
+  line-height: 1.5em;
+}
+#index_h03{
+    color: #000;
+    text-align: center;
+}
+
+
+#home_Prepare{
+    width: 100%;
+    height:auto;
+    background-color: rgb(214, 235, 212);
+    line-height: 1.5em;
+	padding: 0px;
+	float: right;
+}
+.Prepare_h01{
+    text-align: center;
+    color: rgb(0, 0, 0);
+}
+.Prepare_table table {
+    width: 80%;          /* 或你想要的寬度 */
+    margin: 0 auto;      /* 左右自動置中 */
+    border-collapse: collapse;
+    
+}
+/* 預設每個欄位平均分配 */
+.Prepare_table th, 
+.Prepare_table td {
+  width: 20%;   /* 假設總共 5 欄，先平均 */
+}
+
+/* 讓第 4 欄變小 */
+.Prepare_table th:nth-child(2),
+.Prepare_table td:nth-child(2),
+.Prepare_table th:nth-child(4),
+.Prepare_table td:nth-child(4) {
+  width: 10%;   /* 比例縮小 */
+}
+.Prepare_table th:nth-child(5),
+.Prepare_table td:nth-child(5) {
+  width: 30%;   /* 比例縮小 */
+}
+
+/* 其他欄位可以再調整補回 */
+.Prepare_table th:not(:nth-child(2)):not(:nth-child(4)):not(:nth-child(5)),
+.Prepare_table td:not(:nth-child(2)):not(:nth-child(4)):not(:nth-child(5)) {
+  width: calc((100% - 50%) / 2);  /* 剩下 3 欄平均 */
+}
+.Prepare_table th, .Prepare_table td {
+    border: 1px solid #666;
+    padding: 10px;
+    text-align: center;
+}
+/* 表格欄位邊框 */
+.Prepare_table table, 
+.Prepare_table td, 
+.Prepare_table th{
+    border: 1px solid #090909;      /* 灰色邊框 */
+    font-weight: bold;
+    text-align: center;
+}
+/* 表格標題列 (第一列) */
+.Prepare_table tr:first-child {
+  background-color: #5b93c5;   /* 淺藍背景 */
+}
+.Prepare_table tr:not(:first-child) {
+  background-color: #9cb4c9;   /* 淺藍背景 */
+}
+/* 每個儲存格 */
+.Prepare_table td ,.Prepare_table th{
+  padding: 10px 10px;          /* 內距 */
+  text-align: center;            
+  line-height: 1.5em;
+}
+.Prepare_p01{
+    text-align: center;
+    color: rgb(196, 70, 165); 
+    font-size: 30px;
+}
+#footer{ /* 頁尾區 */
+		padding: 1px;
+		background-color:#0f8872	;
+		clear:both; /* 取消float */
+		text-align: center
+}
